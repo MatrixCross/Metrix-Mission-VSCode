@@ -32,13 +32,13 @@
     "views": {
       "metrixmission": [
         {
-          "id": "package-dependencies",
-          "name": "Dependencies",
-          "type": "tree"
+          "id": "helper",
+          "name": "Helper"
         },
         {
-          "id": "package-outline",
-          "name": "Outline"
+          "id": "mission",
+          "name": "Missions",
+          "type": "tree"
         }
       ]
     }
