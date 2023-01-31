@@ -57,6 +57,9 @@
           "type": "tree"
         }
       ]
+    },
+    "menus": {
+      
     }
   },
   "scripts": {
