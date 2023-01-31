@@ -39,27 +39,20 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "metrixmission",
-          "title": "时钟",
+          "id": "todolist-container",
+          "title": "待办事项",
           "icon": "./src/assets/clock.svg"
         }
       ]
     },
     "views": {
-      "metrixmission": [
+      "todolist-container": [
         {
-          "id": "missions",
-          "name": "Missions"
-        },
-        {
-          "id": "add",
-          "name": "Add",
-          "type": "tree"
+          "id": "todolist-view",
+          "name": "列表",
+          "type": "webview"
         }
       ]
-    },
-    "menus": {
-      
     }
   },
   "scripts": {
