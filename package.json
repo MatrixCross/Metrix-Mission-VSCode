@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:metrixmission.helloWorld"
+    "onView:metrixmission"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -20,6 +20,22 @@
         "title": "Hello World"
       }
     ],
+    "configuration": {
+      "type": "object",
+      "title": "metrixmission-plugin-config",
+      "properties": {
+        "metrixmissionPluginConfig.username": {
+          "type": "string",
+          "default": "admin",
+          "description": "你的账号"
+        },
+        "metrixmissionPluginConfig.password": {
+          "type": "string",
+          "default": "admin",
+          "description": "密码"
+        }
+      }
+    },
     "viewsContainers": {
       "activitybar": [
         {
@@ -32,12 +48,12 @@
     "views": {
       "metrixmission": [
         {
-          "id": "helper",
-          "name": "Helper"
+          "id": "missions",
+          "name": "Missions"
         },
         {
-          "id": "mission",
-          "name": "Missions",
+          "id": "add",
+          "name": "Add",
           "type": "tree"
         }
       ]
