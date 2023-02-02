@@ -1,32 +1,46 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@types/glob': ^8.0.0
-  '@types/mocha': ^10.0.1
-  '@types/node': 16.x
-  '@types/vscode': ^1.74.0
-  '@typescript-eslint/eslint-plugin': ^5.45.0
-  '@typescript-eslint/parser': ^5.45.0
-  '@vscode/test-electron': ^2.2.0
-  eslint: ^8.28.0
-  glob: ^8.0.3
-  mocha: ^10.1.0
-  typescript: ^4.9.3
+importers:
 
-devDependencies:
-  '@types/glob': registry.npmmirror.com/@types/glob/8.0.0
-  '@types/mocha': registry.npmmirror.com/@types/mocha/10.0.1
-  '@types/node': registry.npmmirror.com/@types/node/16.18.11
-  '@types/vscode': registry.npmmirror.com/@types/vscode/1.74.0
-  '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.48.2_caon6io6stgpr7lz2rtbhekxqy
-  '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.48.2_7uibuqfxkfaozanbtbziikiqje
-  '@vscode/test-electron': registry.npmmirror.com/@vscode/test-electron/2.2.2
-  eslint: registry.npmmirror.com/eslint/8.32.0
-  glob: registry.npmmirror.com/glob/8.1.0
-  mocha: registry.npmmirror.com/mocha/10.2.0
-  typescript: registry.npmmirror.com/typescript/4.9.4
+  .:
+    specifiers:
+      '@types/glob': ^8.0.0
+      '@types/mocha': ^10.0.1
+      '@types/node': 16.x
+      '@types/vscode': ^1.74.0
+      '@typescript-eslint/eslint-plugin': ^5.45.0
+      '@typescript-eslint/parser': ^5.45.0
+      '@vscode/test-electron': ^2.2.0
+      eslint: ^8.28.0
+      glob: ^8.0.3
+      mocha: ^10.1.0
+      typescript: ^4.9.3
+    devDependencies:
+      '@types/glob': registry.npmmirror.com/@types/glob/8.0.0
+      '@types/mocha': 10.0.1
+      '@types/node': registry.npmmirror.com/@types/node/16.18.11
+      '@types/vscode': registry.npmmirror.com/@types/vscode/1.74.0
+      '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.48.2_caon6io6stgpr7lz2rtbhekxqy
+      '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.48.2_7uibuqfxkfaozanbtbziikiqje
+      '@vscode/test-electron': registry.npmmirror.com/@vscode/test-electron/2.2.2
+      eslint: registry.npmmirror.com/eslint/8.32.0
+      glob: registry.npmmirror.com/glob/8.1.0
+      mocha: registry.npmmirror.com/mocha/10.2.0
+      typescript: registry.npmmirror.com/typescript/4.9.4
 
 packages:
+
+  /@types/mocha/10.0.1:
+    resolution: {integrity: sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==}
+    dev: true
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   registry.npmmirror.com/@eslint/eslintrc/1.4.1:
     resolution: {integrity: sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@eslint/eslintrc/-/eslintrc-1.4.1.tgz}
@@ -126,12 +140,6 @@ packages:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/minimatch/-/minimatch-5.1.2.tgz}
     name: '@types/minimatch'
     version: 5.1.2
-    dev: true
-
-  registry.npmmirror.com/@types/mocha/10.0.1:
-    resolution: {integrity: sha512-/fvYntiO1GeICvqbQ3doGDIP97vWmvFt83GKguJ6prmQM2iXZfFcq6YE8KteFyRtX2/h5Hf91BYvPodJKFYv5Q==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/mocha/-/mocha-10.0.1.tgz}
-    name: '@types/mocha'
-    version: 10.0.1
     dev: true
 
   registry.npmmirror.com/@types/node/16.18.11:
@@ -530,7 +538,7 @@ packages:
       normalize-path: registry.npmmirror.com/normalize-path/3.0.0
       readdirp: registry.npmmirror.com/readdirp/3.6.0
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.npmmirror.com/cliui/7.0.4:
@@ -919,16 +927,6 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
-
-  registry.npmmirror.com/fsevents/2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/fstream/1.0.12:
     resolution: {integrity: sha512-WvJ193OHa0GHPEL+AycEJgxvBEwyfRkN1vhjca23OaPVMCaLCXTd5qAu82AjTcgP1UJmytkOKb63Ypde7raDIg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fstream/-/fstream-1.0.12.tgz}

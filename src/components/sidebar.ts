@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import * as fs from 'fs';
 
 export class TodoListWebView implements vscode.WebviewViewProvider {
   public static viewId: string = "todolist-view";
@@ -15,34 +16,39 @@ export class TodoListWebView implements vscode.WebviewViewProvider {
       vscode.Uri.joinPath(
         this.context.extensionUri,
         "src",
+        "vue",
+        "dist",
         "assets",
-        "style.css"
+        "index-97aa2ab7.css"
       )
     );
     const scriptUri = webviewView.webview.asWebviewUri(
       vscode.Uri.joinPath(
         this.context.extensionUri,
         "src",
+        "vue",
+        "dist",
         "assets",
-        "index.js"
+        "index-c6d79097.js"
       )
     );
 
     webviewView.webview.html = `
-      <!DOCTYPE html>
-      <html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
       <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>todolist</title>
-        <link href="${cssUri}" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + Vue + TS</title>
+        <script type="module" crossorigin src="${scriptUri}"></script>
+        <link rel="stylesheet" href="${cssUri}">
       </head>
       <body>
-        <div class="root" style="background: green">hello todolist</div>
-        <script src="${scriptUri}"></script>
+        <div id="app"></div>
+        
       </body>
-      </html>
+    </html>    
     `;
   }
 }
