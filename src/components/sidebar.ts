@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import * as fs from "fs";
 import path = require("path");
-const cmd = require("node-cmd");
+// const cmd = require("node-cmd");
 
 export class TodoListWebView implements vscode.WebviewViewProvider {
   public static viewId: string = "todolist-view";
@@ -32,17 +32,17 @@ export class TodoListWebView implements vscode.WebviewViewProvider {
     console.log("indexhtml源", indexhtml);
 
     // indexhtml = indexhtml.replace(/=\"\//g, '="' + distUri.toString() + "/");
-    const syncDir = cmd.runSync("cd ../vue & dir");
+    // const syncDir = cmd.runSync("cd ../vue & dir");
 
-    console.log(`
-    
-        Sync Err ${syncDir.err}
-        
-        Sync stderr:  ${syncDir.stderr}
+    // console.log(`
 
-        Sync Data ${syncDir.data}
-    
-    `);
+    //     Sync Err ${syncDir.err}
+
+    //     Sync stderr:  ${syncDir.stderr}
+
+    //     Sync Data ${syncDir.data}
+
+    // `);
 
     console.log("indexhtml滤", indexhtml);
 
